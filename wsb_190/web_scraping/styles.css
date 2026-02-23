@@ -1,0 +1,36 @@
+.A{
+    background-color: black;
+    color: white;
+    width: 80%;
+    height: 200px;
+    border: 20px solid red;
+    padding: 20px;
+    margin: 100px 100px;
+    display: flex;
+    gap: 10px;
+}
+.B{
+    background-color: rgb(170, 202, 127);
+    color: white;
+    width: 80%;
+    height: 200px;
+    border: 20px solid rgb(21, 182, 88);
+    padding: 20px;
+    margin: 100px 100px;
+}
+
+.inner-box{
+    background-color: rgb(198, 209, 208);
+    color: white;
+    width: 200px;
+    height: 160px;
+    border: 5px solid rgb(196, 222, 32);
+    overflow: hidden;
+
+}
+
+
+#img{
+     object-fit: cover; 
+
+}
