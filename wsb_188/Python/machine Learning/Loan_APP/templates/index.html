@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loan Approval Prediction</title>
+
+</head>
+
+<body>
+
+    <h2>Loan Approval Prediction</h2>
+
+    <form action="/predict" method="post">
+
+        Age <input type="number" name="Age"><br>
+
+        Gender
+        <select name="Gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select><br>
+
+        Marital Status
+        <select name="Marital_Status">
+            <option>Single</option>
+            <option>Married</option>
+        </select><br>
+
+        Dependents <input type="number" name="Dependents"><br>
+
+        Employment Type
+        <select name="Employment_Type">
+            <option>Salaried</option>
+            <option>Business</option>
+            <option>Self-Employed</option>
+        </select><br>
+
+        Years in Job <input type="number" name="Years_in_Job"><br>
+
+        Annual Salary <input type="number" name="Annual_Salary"><br>
+
+        Monthly Income <input type="number" name="Monthly_Income"><br>
+
+        Smoking Status
+        <select name="Smoking_Status">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+
+        Disease Status <input type="text" name="Disease_Status"><br>
+
+        Credit Score <input type="number" name="Credit_Score"><br>
+
+        Existing Loan Amount <input type="number" name="Existing_Loan_Amount"><br>
+
+        Total Loan Amount <input type="number" name="Total_Loan_Amount"><br>
+
+        Loan Tenure <input type="number" name="Loan_Tenure_Years"><br>
+
+        Debt to Income Ratio <input type="number" step="0.01" name="Debt_to_Income_Ratio"><br>
+
+        Open Accounts <input type="number" name="Number_of_Open_Accounts"><br>
+
+        Loan Purpose
+        <select name="Loan_Purpose">
+            <option>Car</option>
+            <option>Home</option>
+            <option>Education</option>
+            <option>Personal</option>
+        </select><br>
+
+        Property Ownership
+        <select name="Property_Ownership">
+            <option>Owned</option>
+            <option>Rented</option>
+        </select><br>
+
+        Previous Defaults <input type="number" name="Previous_Defaults"><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    {% if prediction %}
+    <h3>Prediction Result: {{prediction}}</h3>
+    {% endif %}
+
+</body>
+
+</html>

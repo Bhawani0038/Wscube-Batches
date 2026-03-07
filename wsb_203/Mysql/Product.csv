@@ -1,0 +1,21 @@
+﻿product_id,product_name,category,subcategory,brand,product_price,manufacturing_date,expiry_date,quantity_sold,order_date,order_id,warehouse_location,discount_percent,unit_cost,profit_margin
+P001,Amul Milk 1L,Dairy,Milk,Amul,60,01-02-2026,10-02-2026,120,03-02-2026,O1001,Delhi,5,45,25
+P002,Amul Butter 500g,Dairy,Butter,Amul,280,15-01-2026,15-07-2026,85,05-02-2026,O1002,Mumbai,8,210,25
+P003,Mother Dairy Curd 500g,Dairy,Curd,Mother Dairy,45,02-02-2026,09-02-2026,150,04-02-2026,O1003,Delhi,0,32,29
+P004,Britannia Bread,Bakery,Bread,Britannia,40,01-02-2026,07-02-2026,200,02-02-2026,O1004,Jaipur,5,28,30
+P005,Britannia Cake Roll,Bakery,Cakes,Britannia,35,20-01-2026,20-04-2026,95,06-02-2026,O1005,Jaipur,10,22,37
+P006,Good Day Biscuits,Snacks,Biscuits,Britannia,30,25-01-2026,25-07-2026,180,03-02-2026,O1006,Delhi,5,20,33
+P007,Oreo Biscuits,Snacks,Biscuits,Cadbury,45,18-01-2026,18-07-2026,160,04-02-2026,O1007,Mumbai,7,30,33
+P008,Lays Classic Chips,Snacks,Chips,Lays,20,01-02-2026,01-06-2026,220,05-02-2026,O1008,Delhi,0,12,40
+P009,Kurkure Masala Munch,Snacks,Chips,Kurkure,20,01-02-2026,01-06-2026,210,06-02-2026,O1009,Mumbai,0,11,45
+P010,Pepsi 500ml,Beverages,Soft Drink,Pepsi,40,10-01-2026,10-07-2026,300,03-02-2026,O1010,Delhi,10,25,37
+P011,Coca Cola 500ml,Beverages,Soft Drink,Coca Cola,40,12-01-2026,12-07-2026,280,05-02-2026,O1011,Jaipur,10,26,35
+P012,Real Orange Juice,Beverages,Juice,Real,120,05-01-2026,05-05-2026,90,04-02-2026,O1012,Mumbai,5,85,29
+P013,Tata Salt,Grocery,Spices,Tata,25,10-12-2025,10-12-2027,170,06-02-2026,O1013,Delhi,0,15,40
+P014,Aashirvaad Atta 5kg,Grocery,Flour,Aashirvaad,260,01-01-2026,31-12-2026,75,02-02-2026,O1014,Jaipur,5,210,19
+P015,Fortune Sunflower Oil 1L,Grocery,Edible Oil,Fortune,180,05-01-2026,05-10-2026,110,03-02-2026,O1015,Mumbai,8,140,22
+P016,Maggi Noodles 70g,Instant Food,Noodles,Nestle,14,15-01-2026,15-09-2026,350,05-02-2026,O1016,Delhi,0,9,35
+P017,Yippee Noodles 70g,Instant Food,Noodles,ITC,14,20-01-2026,20-09-2026,320,06-02-2026,O1017,Jaipur,0,9,35
+P018,Kissan Tomato Ketchup,Condiments,Sauces,Kissan,110,01-01-2026,01-01-2027,60,04-02-2026,O1018,Mumbai,6,80,27
+P019,Amul Cheese Slices,Dairy,Cheese,Amul,135,10-01-2026,10-06-2026,70,05-02-2026,O1019,Delhi,5,100,26
+P020,Harvest Gold Bread,Bakery,Bread,Harvest Gold,38,01-02-2026,07-02-2026,190,02-02-2026,O1020,Jaipur,5,27,29

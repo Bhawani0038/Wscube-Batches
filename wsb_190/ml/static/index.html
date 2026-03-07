@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+    <style>
+        body { font-family: Arial; background:#f4f6f9; padding:40px; }
+        .container {
+            background:white;
+            padding:30px;
+            width:500px;
+            margin:auto;
+            border-radius:8px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+        input, select, button {
+            width:100%;
+            padding:8px;
+            margin-top:8px;
+        }
+        button {
+            background:#007bff;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+        .result { margin-top:20px; font-weight:bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+<h2>Loan Application</h2>
+
+<input id="Customer_ID" placeholder="Customer ID">
+<input id="Name" placeholder="Name">
+<input type="number" id="Age" placeholder="Age">
+
+<select id="Gender">
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+
+<select id="Marital_Status">
+<option value="Single">Single</option>
+<option value="Married">Married</option>
+</select>
+
+<input type="number" id="Dependents" placeholder="Dependents">
+
+<select id="Employment_Type">
+<option value="Salaried">Salaried</option>
+<option value="Self-Employed">Self-Employed</option>
+</select>
+
+<input type="number" id="Years_in_Job" placeholder="Years in Job">
+<input type="number" id="Annual_Salary" placeholder="Annual Salary">
+<input type="number" id="Monthly_Income" placeholder="Monthly Income">
+<input type="number" step="0.01" id="Debt_to_Income_Ratio" placeholder="Debt-to-Income Ratio">
+<input type="number" id="Credit_Score" placeholder="Credit Score">
+<input type="number" id="Number_of_Open_Accounts" placeholder="Open Accounts">
+<input type="number" id="Previous_Defaults" placeholder="Previous Defaults">
+<input type="number" id="Existing_Loan_Amount" placeholder="Existing Loan Amount">
+<input type="number" id="Total_Loan_Amount" placeholder="Total Loan Amount">
+<input type="number" id="Loan_Tenure_Years" placeholder="Loan Tenure (Years)">
+
+<select id="Loan_Purpose">
+<option value="Home">Home</option>
+<option value="Car">Car</option>
+<option value="Business">Business</option>
+<option value="Personal">Personal</option>
+</select>
+
+<select id="Property_Ownership">
+<option value="Owned">Owned</option>
+<option value="Rented">Rented</option>
+</select>
+
+<select id="Smoking_Status">
+<option value="No">Smoking: No</option>
+<option value="Yes">Smoking: Yes</option>
+</select>
+
+<select id="Disease_Status">
+<option value="No">Disease: No</option>
+<option value="Yes">Disease: Yes</option>
+</select>
+
+<button onclick="predict()">Predict</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<script>
+async function predict() {
+
+const data = {
+Customer_ID: document.getElementById("Customer_ID").value,
+Name: document.getElementById("Name").value,
+Age: parseInt(document.getElementById("Age").value),
+Gender: document.getElementById("Gender").value,
+Marital_Status: document.getElementById("Marital_Status").value,
+Dependents: parseInt(document.getElementById("Dependents").value),
+Employment_Type: document.getElementById("Employment_Type").value,
+Years_in_Job: parseInt(document.getElementById("Years_in_Job").value),
+Annual_Salary: parseFloat(document.getElementById("Annual_Salary").value),
+Monthly_Income: parseFloat(document.getElementById("Monthly_Income").value),
+Debt_to_Income_Ratio: parseFloat(document.getElementById("Debt_to_Income_Ratio").value),
+Credit_Score: parseInt(document.getElementById("Credit_Score").value),
+Number_of_Open_Accounts: parseInt(document.getElementById("Number_of_Open_Accounts").value),
+Previous_Defaults: parseInt(document.getElementById("Previous_Defaults").value),
+Existing_Loan_Amount: parseFloat(document.getElementById("Existing_Loan_Amount").value),
+Total_Loan_Amount: parseFloat(document.getElementById("Total_Loan_Amount").value),
+Loan_Tenure_Years: parseInt(document.getElementById("Loan_Tenure_Years").value),
+Loan_Purpose: document.getElementById("Loan_Purpose").value,
+Property_Ownership: document.getElementById("Property_Ownership").value,
+Smoking_Status: document.getElementById("Smoking_Status").value,
+Disease_Status: document.getElementById("Disease_Status").value
+};
+
+const response = await fetch("/predict", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify(data)
+});
+
+const result = await response.json();
+
+document.getElementById("result").innerHTML =
+"Prediction: " + (result.prediction === 1 ? "Approved" : "Rejected") +
+"<br>Probability: " + result.probability;
+
+}
+</script>
+
+</body>
+</html>
